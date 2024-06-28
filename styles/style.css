@@ -143,8 +143,8 @@
 .main__content_card-image-watermark {
   position: absolute;
   z-index: 2;
-  inset-inline-end: 12px;
-  inset-block-start: 23px;
+  inset-inline-end: 1px;
+  inset-block-start: 2px;
   font-family: var(--accent-font, 'PressStart2P'), 'fantasy';
   font-size: 14px;
   text-shadow: 0 0 1px var(--bg-color,#fff);
@@ -176,7 +176,7 @@
 }
 
 .double-filter {
-  filter: hue-rotate(30deg) saturate(146%)
+  filter: hue-rotate(10deg) saturate(146%)
 }
 .invert {
   filter: invert(0.8);
@@ -187,7 +187,7 @@
 }
 
 .blur {
-  filter: blur(0.8rem);
+  filter: blur(0.3rem);
 }
 
 .hue-rotate {
@@ -207,6 +207,21 @@
   font-family: inherit;
   font-size: inherit;
   line-height: 116%;
+}
+
+.spoiler {
+  position: relative;
+  margin:0 10px 0 ;
+  cursor: pointer;
+  list-style: none;
+}
+
+.spoiler::before {
+  content: '▶';
+  position: absolute;
+  inset-inline-start: -25px;
+  inset-block-start: 20px ;
+  animation: selector 0.5s ease-in-out infinite alternate;
 }
 
 .card__buttons-wrapper {
